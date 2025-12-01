@@ -165,7 +165,7 @@ Kết quả:
 similar("computer") → desktop, laptop, pc, tablet
 Embedding mượt và hợp lý hơn nhờ dữ liệu lớn.
 
-LAB 4 – GIẢM CHIỀU & TRỰC QUAN HÓA
+# LAB 4 – GIẢM CHIỀU & TRỰC QUAN HÓA
 1. PCA
 Giữ cấu trúc toàn cục của embedding.
 
@@ -184,9 +184,9 @@ PCA cho overview.
 
 t-SNE cho insight về ngữ nghĩa nhóm từ.
 
-LAB 5 – PHÂN LOẠI VĂN BẢN (TEXT CLASSIFICATION)
-1. Thành phần đã cài đặt
-1.1 Tokenizer + TF-IDF
+# LAB 5 – PHÂN LOẠI VĂN BẢN (TEXT CLASSIFICATION)
+## 1. Thành phần đã cài đặt
+### 1.1 Tokenizer + TF-IDF
 TF-IDF được cài bằng công thức:
 
 tfidf = tf * log((N+1)/(df+1)) + 1
@@ -199,8 +199,8 @@ tfidf = tf * idf
 clf = LogisticRegression(solver="liblinear")
 clf.fit(X_train, y_train)
 pred = clf.predict(X_test)
-2. CHẠY MÃ NGUỒN
-2.1 Test cơ bản (Task 2)
+## 2. CHẠY MÃ NGUỒN
+### 2.1 Test cơ bản (Task 2)
 
 python lab5_test.py
 Kết quả:
@@ -208,7 +208,7 @@ Accuracy: 0.50
 F1: 0.50
 → Do dataset quá nhỏ (16 mẫu).
 
-2.2 Phân tích cảm xúc với PySpark (Task 3)
+### 2.2 Phân tích cảm xúc với PySpark (Task 3)
 
 python lab5_spark_sentiment_analysis.py
 Kết quả (5,791 mẫu):
@@ -227,7 +227,7 @@ FN = 130
 
 → Mô hình thiên lệch về Positive do imbalance.
 
-2.3 Cải tiến mô hình (Task 4)
+### 2.3 Cải tiến mô hình (Task 4)
 
 python lab5_improvement_test.py
 Kết quả tóm tắt:
@@ -240,7 +240,7 @@ Lọc từ hiếm	71.34%	0.7940
 
 → Best: TF-IDF 200 features.
 
-3. PHÂN TÍCH CHUNG
+## 3. PHÂN TÍCH CHUNG
 Mô hình pre-trained (GloVe) cho kết quả tốt nhất về ngữ nghĩa.
 
 Word2Vec Spark tốt hơn nhiều so với Word2Vec tập nhỏ.
@@ -251,14 +251,14 @@ Logistic Regression + TF-IDF vẫn rất hiệu quả.
 
 Tăng số lượng features giúp mô hình cải thiện rõ rệt.
 
-4. KHÓ KHĂN
+## 4. KHÓ KHĂN
 Spark hơi nặng, một số máy cài đặt mất thời gian.
 
 Dataset nhỏ trong Task 2 làm kết quả kém.
 
 Việc load GloVe bản text mất thời gian vì file lớn.
 
-5. TÀI LIỆU THAM KHẢO
+## 5. TÀI LIỆU THAM KHẢO
 Tài liệu thư viện: Gensim, Scikit-Learn, PySpark MLlib
 
 Gợi ý, hướng dẫn xây dựng code từ ChatGPT và DeepSeek
@@ -267,7 +267,7 @@ UD English EWT Dataset – Universal Dependencies
 
 Stanford GloVe pretrained word vectors
 
-#Lab6
+# Lab6
 
 
 # BÀI 1 – KHÔI PHỤC MASKED TOKEN (Masked Language Modeling)
